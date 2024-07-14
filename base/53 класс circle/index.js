@@ -10,10 +10,16 @@ class Circle {
     this.#radius = radius;
   }
 
-  getSquare() {
-    return Math.PI * this.#radius;
+  getArea() {
+    return Math.PI * Math.pow(this.#radius, 2);
+  }
+
+  getCircumference() {
+    return 2 * Math.PI * this.#radius;
   }
 }
 
-const circle = new Circle(10);
-console.log(circle.getSquare());
+const myCircle = new Circle(5);
+
+console.log('area:', myCircle.getArea());
+console.log('Circumference:', myCircle.getCircumference());
